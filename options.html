@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Slouch-Patrol Settings</title>
+        <style>
+            :root {
+                --primary: #4c9fff;
+                --bg: #f8fafc;
+                --card: #ffffff;
+                --text: #1e293b;
+                --border: #e2e8f0;
+            }
+
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    sans-serif;
+                background-color: var(--bg);
+                color: var(--text);
+                display: flex;
+                justify-content: center;
+                padding: 40px 20px;
+                margin: 0;
+            }
+
+            .container {
+                background: var(--card);
+                padding: 32px;
+                border-radius: 16px;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                max-width: 400px;
+                border: 1px solid var(--border);
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                margin-top: 0;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .setting-group {
+                margin-bottom: 24px;
+            }
+
+            label {
+                display: block;
+                font-weight: 600;
+                margin-bottom: 8px;
+                font-size: 0.9rem;
+            }
+
+            input[type="number"] {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                font-size: 1rem;
+                box-sizing: border-box;
+                outline: none;
+                transition: border-color 0.2s;
+            }
+
+            input[type="number"]:focus {
+                border-color: var(--primary);
+            }
+
+            .hint {
+                font-size: 0.8rem;
+                color: #64748b;
+                margin-top: 6px;
+            }
+
+            button {
+                width: 100%;
+                background-color: var(--primary);
+                color: white;
+                border: none;
+                padding: 12px;
+                border-radius: 8px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: opacity 0.2s;
+            }
+
+            button:hover {
+                opacity: 0.9;
+            }
+
+            #status {
+                margin-top: 16px;
+                font-size: 0.85rem;
+                text-align: center;
+                color: #059669;
+                height: 20px; /* Prevent layout shift */
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>👮 Slouch-Patrol</h1>
+            <p class="hint">Configure your patrol frequency below.</p>
+
+            <hr
+                style="
+                    border: 0;
+                    border-top: 1px solid var(--border);
+                    margin: 20px 0;
+                "
+            />
+
+            <div class="setting-group">
+                <label for="interval">Reminder Interval (minutes)</label>
+                <input
+                    type="number"
+                    id="interval"
+                    min="1"
+                    max="120"
+                    value="20"
+                />
+                <p class="hint">
+                    How often should we check your posture? (1 - 120 mins)
+                </p>
+            </div>
+
+            <button id="save">Save Settings</button>
+            <div id="status">Settings saved successfully!</div>
+        </div>
+
+        <script src="options.js"></script>
+    </body>
+</html>

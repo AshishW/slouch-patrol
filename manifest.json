@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Slouch-Patrol: Because You Forgot Again",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/slouch-police-transparent.png"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "16": "/icons/slouch-police.png",
+    "32": "/icons/slouch-police.png",
+    "48": "/icons/slouch-police.png",
+    "128": "/icons/slouch-police.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "alarms",
+    "notifications",
+    "storage",
+    "idle",
+    "activeTab",
+    "tabs"
+  ]
+}
