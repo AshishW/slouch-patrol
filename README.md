@@ -1,6 +1,6 @@
 # Slouch-Patrol 🚨
 
-[slouch-police]('/icons/slouch-police.png')
+![slouch-police](/icons/slouch-police.png)
 > **"Because your spine isn't a laptop stand."**
 
 
