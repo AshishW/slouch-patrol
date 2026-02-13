@@ -1,7 +1,7 @@
 # Slouch-Patrol 🚨
+> **"Because your spine isn't a laptop stand."**
 
 ![slouch-police](/icons/slouch-police.png)
-> **"Because your spine isn't a laptop stand."**
 
 
 Slouch-Patrol is a Chrome Extension built to remind you to sit straight, stretch and hydrate when you are actually at your desk.
