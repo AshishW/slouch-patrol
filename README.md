@@ -10,7 +10,9 @@ Slouch-Patrol is a Chrome Extension built to remind you to sit straight, stretch
 
 * **Animated In-Page "Peeks"**: An animated patrol officer physically appears on your current webpage to deliver a randomized wellness message.
 * **Customizable Intervals**: User-friendly options page to persist your settings across all your devices.
-* 
+
+![demo](/demo.png)
+
 
 ## Installation for Testing
 
