@@ -12,7 +12,7 @@ chrome.storage.onChanged.addListener((changes, area) => {
 chrome.runtime.onInstalled.addListener((details) => {
   console.log("Slouch-Patrol reporting for duty 👮🚨");
   chrome.alarms.create("slouch-check", {
-    periodInMinutes: 20,
+    periodInMinutes: 35,
   });
   if (details.reason === "install") {
     // first install
